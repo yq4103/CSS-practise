@@ -39,6 +39,11 @@ body {
   width: 85%;
   border-radius: 10px;
   margin: 25px 25px;
+  transition: all 0.2s ease-in-out;
+}
+
+.container img.picture:hover {
+  opacity: 0.8;
 }
 
 .container h2 {
@@ -49,17 +54,80 @@ body {
 
 .container p.desc {
   padding-left: 20px;
+  margin-top: 20px;
   text-align: left;
   font-size: 18px;
   line-height: 1.6;
   color: var(--soft-blue);
 }
 
+.container .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.container .info img {
+  width: 15px;
+  height: 15px;
+}
+
+.container .info h4 {
+  color: var(--cyan);
+}
+
+.container .info p {
+  color: var(--soft-blue);
+}
+
+.container .info .eth {
+  display: flex;
+  flex-direction: row;
+}
+
+.container .info .days {
+  display: flex;
+  flex-direction: row;
+}
+
+hr {
+  margin: 20px;
+  border: 0.01em solid hsl(215, 32%, 27%);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 20px;
+  color: var(--soft-blue);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 20px;
+  color: var(--soft-blue);
+}
+
+.attribution p {
+  font-size: 18px;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--white);
+}
+
+.attribution img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
