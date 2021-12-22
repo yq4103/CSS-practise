@@ -15,6 +15,10 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   font-family: "Outfit", sans-serif;
   background-color: var(--very-dark-blue-main);
@@ -34,22 +38,49 @@ body {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
-.container img.picture {
+.container .img-hover {
   height: 85%;
   width: 85%;
   border-radius: 10px;
   margin: 25px 25px;
-  transition: all 0.2s ease-in-out;
 }
 
-.container img.picture:hover {
-  opacity: 0.8;
+.container .img-hover {
+  position: relative;
+}
+
+.container .img-hover div {
+  position: absolute;
+  top: 0;
+  background-color: hsl(178, 100%, 50%, 60%);
+  width: 100%;
+  height: calc(100% - 4px);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.container .img-hover div:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.container .img-hover div img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .container h2 {
   color: var(--white);
   padding-left: 20px;
   text-align: left;
+}
+
+.container h2:hover {
+  color: var(--cyan);
+  cursor: pointer;
 }
 
 .container p.desc {
@@ -66,34 +97,28 @@ body {
   flex-direction: row;
   justify-content: space-between;
   margin: 20px;
-}
-
-.container .info img {
-  width: 15px;
-  height: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--very-dark-blue-line);
 }
 
 .container .info h4 {
   color: var(--cyan);
+  margin-left: 0.3em;
 }
 
 .container .info p {
   color: var(--soft-blue);
+  margin-left: 0.3em;
 }
 
 .container .info .eth {
   display: flex;
-  flex-direction: row;
+  align-items: center;
 }
 
 .container .info .days {
   display: flex;
-  flex-direction: row;
-}
-
-hr {
-  margin: 20px;
-  border: 0.01em solid hsl(215, 32%, 27%);
+  align-items: center;
 }
 
 .attribution {
@@ -126,8 +151,19 @@ hr {
   color: var(--white);
 }
 
+.attribution a:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
 .attribution img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+}
+
+@media(min-width: 500px) {
+  .container {
+    width: 350px;
+  }
 }
