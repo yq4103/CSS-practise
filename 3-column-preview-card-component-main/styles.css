@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 20px;
+  color: var(--transparent-white);
+  max-width: 350px;
+}
+
+.card {
+  padding: 60px;
+}
+
+.card img {
+  margin-bottom: 25px;
+}
+
+.card h1 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 40px;
+  color: var(--very-light-gray);
+}
+
+.card p {
+  margin-bottom: 30px;
+}
+
+.container h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+}
+
+.container p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.container button {
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+  transition: all 0.2s ease-in-out;
+}
+
+.container button:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.container .b1 {
+  color: var(--bright-orange);
+}
+
+.container .b2 {
+  color: var(--dark-cyan);
+}
+
+.container .b3 {
+  color: var(--very-dark-cyan);
+}
+
+.container .p1 {
+  background-color: var(--bright-orange);
+  border-radius: 10px 10px 0 0;
+}
+
+.container .p2 {
+  background-color: var(--dark-cyan);
+}
+
+.container .p3 {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 10px 10px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 992px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .container .p1 {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .container .p3 {
+    border-radius: 0 10px 10px 0;
+  }
+
+  .card {
+    padding: 45px;
+  }
+
+  .card p {
+    margin-bottom: 100px;
+  }
+}
