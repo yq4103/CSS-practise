@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  text-align: left;
+  background-color: var(--Light-Gray);
+  color: var(--Grayish-Blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: white;
+  margin: 240px;
+  border-radius: 5px;
+  box-shadow: 0 15px 15px 15px rgba(11, 15, 34, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+}
+
+.container .c1 {
+  width: 100%;
+  padding: 35px 25px 35px 25px;
+}
+
+.container .c1 h3 {
+  color: var(--Cyan);
+}
+
+.container .c1 h4 {
+  color: var(--Bright-Yellow);
+}
+
+.container .c1 p {
+  margin-top: 20px;
+}
+
+.container .c2 {
+  width: 100%;
+  padding: 30px 25px 30px 25px;
+  background-color: var(--Cyan);
+  color: hsl(204, 43%, 93%);
+}
+
+.container .c2 .price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.container .c2 .price p {
+  color: hsl(204, 43%, 93%, 50%);
+  padding-left: 10px;
+}
+
+.container .c2 button {
+  border: none;
+  padding: 15px 100px;
+  border-radius: 5px;
+  background-color: var(--Bright-Yellow);
+  color: hsl(204, 43%, 93%);
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.container .c2 button:hover {
+  box-shadow: 0 5px 5px 5px hsl(228, 45%, 44%, 0.1);
+}
+
+.container .c2 div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .c3 {
+  width: 100%;
+  padding: 30px 25px 30px 25px;
+  background-color: hsl(179, 62%, 43%, 70%);
+  color: hsl(204, 43%, 93%);
+}
+
+.container .c3 ul{
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media(min-width: 900px) {
+  .container {
+    margin: 300px;
+    border-radius: 10px;
+  }
+
+  .container .c1 {
+    padding: 45px;
+  }
+
+  .container .c1 p {
+    margin-top: 10px;
+  }
+
+  .container .c2 {
+    width: 50%;
+    padding: 40px;
+  }
+  
+  .container .c3 {
+    width: 50%;
+    padding: 40px;
+  }
+}
