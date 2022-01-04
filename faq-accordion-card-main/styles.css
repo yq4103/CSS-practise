@@ -18,7 +18,7 @@
   box-sizing: border-box;
 }
 
-*::before, *::after {
+*::after {
   box-sizing: inherit;
 }
 
