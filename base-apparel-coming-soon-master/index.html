@@ -12,27 +12,37 @@
 </head>
 <body>
   <div class="card">
-    <img src="images/logo.svg" alt="" class="banner"/>
-    <img src="images/hero-desktop.jpg" alt="" class="desktop">
-    <img src="images/hero-mobile.jpg" alt="" class="mobile">
-
-    <h1>
-      <span>W e ' r e</span>
-      <br>
-      c o m i n g
-      <br>
-      s o o n
-    </h1>
-    <p>
-      Hello fellow shoppers! We're currently building our new fashion store. 
-      Add your email below to stay up-to-date with announcements and our launch deals.
-    </p>
-    <form action="/action_page.php">
-      <input type="email" placeholder="Email Address">
-      <button type="submit"><img src="images/icon-arrow.svg" alt=""/></button>
-    </form>
-  </div>
+    <div class="desktop">
+      <img src="images/hero-desktop.jpg" alt="">
+    </div>
+    <div class="text">
+      <img src="images/logo.svg" alt="" class="banner"/>
+      <img src="images/hero-mobile.jpg" alt="" class="mobile">
   
+      <h1>
+        <span>We're</span>
+        <br>
+        coming
+        <br>
+        soon
+      </h1>
+      <p>
+        Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+      <form id="form">
+        <input id="email" type="email" placeholder="Email Address">
+        <img src="images/icon-error.svg" alt="" class="error_icon">
+        <button type="submit">
+          <img src="images/icon-arrow.svg" alt="" class="arrow"/>
+        </button>
+        <small>
+          Please provide a valid email.
+        </small>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

@@ -26,10 +26,11 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  width: 375px;
+  max-width: 375px;
   top: 0;
   padding-bottom: 20px;
-  background-color: white;
+  margin-bottom: 5px;
+  background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
   line-height: 1.5;
   color: var(--desaturated-red);
 }
@@ -37,6 +38,7 @@ body {
 .card .banner {
   width: 130px;
   padding: 30px 0 30px 30px;
+  display: flex;
 }
 
 .card h1 {
@@ -44,10 +46,8 @@ body {
   text-transform: uppercase;
   font-size: 40px;
   line-height: 1;
-}
-
-.card h1 {
-  color: black;
+  color: hsl(0, 0%, 0%, 0.7);
+  letter-spacing: 10px;
 }
 
 .card h1 span{
@@ -57,21 +57,66 @@ body {
 
 .card p {
   padding: 0 20px 30px 20px;
+}
 
+.card form {
+  margin: 0 20px 90px 20px;
+  position: relative;
 }
 
 .card form input {
   border-radius: 50px;
-  padding: 15px 150px 15px 10px;
-  border: 2px solid var(--desaturated-red);
+  padding: 15px;
+  width: 100%;
+  border: 1px solid var(--desaturated-red);
+  background-color: transparent;
+}
+
+::placeholder {
+  color: var(--desaturated-red);
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .card form button {
   border-radius: 25px;
-  padding: 12px 26px 12px 26px;
+  padding: 13px 26px 13px 26px;
   border: none;
   background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-  transform: translateX(121px) translateY(-48px);
+  box-shadow: 0 10px 10px 10px hsl(0, 36%, 70%, 0.2);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.card form button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.card form .error_icon {
+  display: none;
+  position: absolute;
+  top: 14px;
+  left: 230px;
+}
+
+.card .error input {
+  border: 2px solid var(--soft-red);
+}
+
+.card form small {
+  display: none;
+  margin-top: 10px;
+  color: var(--soft-red);
+}
+
+.card .error .error_icon {
+  display: block;
+}
+
+.card .error small {
+  display: block;
 }
 
 .desktop {
@@ -91,5 +136,88 @@ body {
 @media(min-width: 1440px) {
   body {
     min-height: 100vh;
+    padding: 0;
+    margin: 0 10px 0 10px;
+  }
+
+  .card .mobile {
+    display: none;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: auto;
+    padding: 0;
+    overflow: hidden;
+    max-width: 1440px;
+  }
+
+  .card .desktop {
+    display: block;
+    width: 42%;
+  }
+
+  .card .desktop img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .card .text {
+    width: 58%;
+    text-align: left;
+    padding: 65px 160px 65px 160px;
+    line-height: 2;
+    background-image: url('images/bg-pattern-desktop.svg');
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .card .banner {
+    width: 165px;
+    padding: 0;
+  }
+
+  .card h1 {
+    padding: 120px 0 20px 0;
+    font-size: 65px;
+    letter-spacing: 18px;
+    line-height: 1.1;
+  }
+
+  .card p {
+    padding: 0 70px 30px 0;
+    font-size: 16px;
+  }
+
+  .card form {
+    margin: 0 75px 0 0;
+  }
+
+  .card form input {
+    padding: 20px;
+  }
+
+  ::placeholder {
+    font-size: 17px;
+  }
+
+  .card form button {
+    padding: 18px 45px 18px 45px;
+    border-radius: 35px;
+  }
+
+  .card form .error_icon {
+    top: 16px;
+    left: 305px;
+  }
+
+  .card form small {
+    display: none;
+    margin: 10px 0 0 30px;
+    color: var(--soft-red);
   }
 }
