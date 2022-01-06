@@ -1,7 +1,7 @@
 # Frontend Mentor - Base Apparel coming soon page
 
-![mobile](./design/mobile.png)
 ![desktop](./design/desktop.png)
+![mobile](./design/mobile.png)
 
 ## The challenge
 
