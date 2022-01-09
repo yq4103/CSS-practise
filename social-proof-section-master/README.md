@@ -1,7 +1,7 @@
 # Frontend Mentor - Social proof section
 
-![desktop](./design/desktop.png)
-![mobile](./design/mobile.png)
+![desktop](design/desktop.png)
+![mobile](design/mobile.png)
 
 ## The challenge
 
