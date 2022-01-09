@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+  font-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  height: auto;
+  margin: 0;
+  padding: 80px 20px;
+  background-color: var(--white);
+  line-height: 1.6;
+  color: var(--very-dark-magenta);
+}
+
+.card h1 {
+  padding: 0 30px 0 30px;
+  line-height: 1;
+}
+
+.card .desc {
+  color: var(--dark-grayish-magenta);
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 0 10px 0 10px;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.card ul {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+.card li {
+  background-color: var(--light-grayish-magenta);
+  margin-bottom: 20px;
+  padding: 15px 30px 15px 30px;
+  border-radius: 10px;
+}
+
+.card li div{
+  background: url(images/icon-star.svg);
+  background-repeat: space;
+  transform: translateX(96px);
+  width: 100px;
+  height: 30px;
+}
+
+.p1, .p2, .p3 {
+  background-color: var(--very-dark-magenta);
+  color: var(--light-grayish-magenta);
+  margin-bottom: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.p1 span, .p2 span, .p3 span {
+  color: var(--soft-pink);
+  font-weight: lighter;
+}
+
+.p1 img, .p2 img, .p3 img {
+  border-radius: 50px;
+  width: 50px;
+  margin-right: 30px;
+}
+
+.p1 div, .p2 div, .p3 div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.attribution a {
+  color: white;
+}
+
+@media(min-width: 1440px) {
+
+}
