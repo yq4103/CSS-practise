@@ -3,7 +3,8 @@
 :root {
   --violet: hsl(257, 40%, 49%);
   --soft-magenta: hsl(300, 69%, 71%);
-  font-size: 14px;
+  --transparent-white: rgba(255, 255, 255, 0.769);
+  font-size: 15px;
 }
 
 * {
@@ -28,10 +29,9 @@ body {
   max-width: 375px;
   height: auto;
   margin: 0;
-  background-color: var(--violet);
   line-height: 1.6;
   color: var(--very-dark-magenta);
-  position: relative;
+  background: url('images/bg-mobile.svg') no-repeat var(--violet);
 }
 
 .container {
@@ -44,28 +44,23 @@ body {
   padding: 30px 0 60px 40px;
 }
 
-.bg_desktop {
-  display: none;
-}
-
-.bg_mobile {
-  position: absolute;
-  display: flex;
-}
-
 .hero img {
-  position: relative;
   width: 300px;
 }
 
 .text {
   color: white;
-  padding: 55px;
+  padding: 45px;
+}
+
+.text h2 {
+  margin-top: 10px;
 }
 
 .text p {
   font-family: 'Open Sans', sans-serif;
   margin: 20px 0 20px 0;
+  color: var(--transparent-white);
 }
 
 .text button {
@@ -78,6 +73,26 @@ body {
   color: var(--violet);
 }
 
+.text button:hover {
+  background-color: var(--soft-magenta);
+  color: var(--transparent-white);
+  transition: 0.3s ease-in-out;
+}
+
+.social-links {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.social-links .fa-stack {
+  color: white;
+}
+
+.social-links .fa-stack:hover {
+  color: var(--soft-magenta);
+  transition: 0.3s ease-in-out;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -85,4 +100,71 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media(min-width: 1440px) {
+
+  .card {
+    background: url('images/bg-desktop.svg') no-repeat var(--violet);
+    background-position-y: top;
+    background-position-x: left;
+    background-size: 90%;
+  }
+
+  .card {
+    max-width: 1440px;
+  }
+
+  .logo img {
+    width: 270px;
+    padding: 50px 0 90px 70px;
+  }
+
+  .desktop_display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .hero img {
+    width: 770px;
+    padding-left: 70px;
+    padding-bottom: 80px;
+  }
+
+  .desktop_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .text {
+    text-align: left;
+    padding-right: 105px;
+  }
+
+  .text h2 {
+    font-size: 40px;
+    margin-top: 0;
+  }
+
+  .text p {
+    font-size: 18px;
+  }
+
+  .text button {
+    font-size: 20px;
+    padding: 15px 60px;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 70px;
+    font-size: 20px;
+  }
+
+  .social-links a {
+    margin: 5px;
+  }
 }
