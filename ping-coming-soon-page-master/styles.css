@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+  font-size: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 375px;
+  height: auto;
+  margin: 0;
+  padding: 80px 10px 20px 10px;
+  line-height: 1.6;
+  color: var(--very-dark-magenta);
+  background: white;
+}
+
+.logo {
+  width: 50px;
+  padding-bottom: 30px;
+}
+
+.card h4 {
+  padding-bottom: 10px;
+}
+
+.card h4 span {
+  font-weight: 100;
+  color: var(--gray);
+}
+
+.card p {
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+
+.card form input {
+  font-size: 12px;
+  border: 1px solid var(--pale-blue);
+  padding: 10px 70px;
+  border-radius: 40px;
+  margin-bottom: 10px;
+}
+
+.card button {
+  font-size: 12px;
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  padding: 10px 110px;
+  border-radius: 40px;
+  margin-bottom: 50px;
+}
+
+.dashboard {
+  width: 300px;
+}
+
+.copyright {
+  color: var(--gray);
+  padding-top: 30px;
+}
+
+.attribution {
+  font-size: 11px; text-align: center;
+  color: white;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
