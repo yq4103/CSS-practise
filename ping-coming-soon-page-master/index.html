@@ -7,6 +7,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
   <title>Frontend Mentor | Ping coming soon page</title>
 
@@ -22,17 +24,42 @@
     </p>
     <form id="form">
       <input id="email" type="email" placeholder="Your email address...">
+      <small>
+        Please provide a valid email address.
+      </small>
+      <button type="submit">
+        Notify Me
+      </button>
     </form>
-    <button>
-      Notify Me
-    </button>
+
     <img src="images/illustration-dashboard.png" class="dashboard">
+
+    <div class="social-links">
+      <a href="https://www.facebook.com/" style="text-decoration: none;">
+        <span class="fa-stack">
+          <i class="fa fa-circle-thin fa-stack-2x" style="color: hsl(0, 4%, 90%);"></i>
+          <i class="fa fa-facebook fa-stack-1x"></i>
+        </span>
+      </a>
+      <a href="https://twitter.com/" style="text-decoration: none;">
+        <span class="fa-stack">
+          <i class="fa fa-circle-thin fa-stack-2x" style="color: hsl(0, 4%, 90%);"></i>
+          <i class="fa fa-twitter fa-stack-1x"></i>
+        </span>
+      </a>
+      <a href="https://www.instagram.com/" style="text-decoration: none;">
+        <span class="fa-stack">
+          <i class="fa fa-circle-thin fa-stack-2x" style="color: hsl(0, 4%, 90%);"></i>
+          <i class="fa fa-instagram fa-stack-1x"></i>
+        </span>
+      </a>
+    </div>
   
     <p class="copyright">
       &copy; Copyright Ping. All rights reserved.
     </p>
   </div>
-
+  <script src="script.js"></script>
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
