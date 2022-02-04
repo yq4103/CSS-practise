@@ -76,10 +76,17 @@ body {
   background-color: var(--blue);
   color: white;
   border: none;
+  box-shadow: 0 5px 5px 5px rgba(183, 184, 205, 0.2);
   padding: 10px 110px;
   border-radius: 40px;
   margin-top: 10px;
   margin-bottom: 50px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card form button:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .card form small {
@@ -91,7 +98,11 @@ body {
   color: var(--light-red);
 }
 
-.card .error small {
+.card .error1 .valid {
+  display: block;
+}
+
+.card .error2 .blank {
   display: block;
 }
 
@@ -100,15 +111,32 @@ body {
 }
 
 .social-links {
-  margin-top: 20px;
+  margin-top: 100px;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
 }
 
 .social-links .fa-stack {
   color: var(--blue);
   font-size: smaller;
-  padding-top: 100px;
-  padding-bottom: 20px;
+  margin: -5px 0 0 -3px;
+}
+
+.social-links .circle {
+  border: 0.5px solid hsl(0, 0%, 59%, 0.2);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.social-links .fa-stack:hover {
+  color: white;
+}
+
+.social-links .circle:hover {
+  background-color: var(--blue);
 }
 
 .card .copyright {
@@ -117,10 +145,49 @@ body {
 }
 
 .attribution {
-  font-size: 11px; text-align: center;
+  font-size: 11px;
+  text-align: center;
   color: white;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media(min-width: 1440px) {
+  .card {
+    max-width: 1440px;
+    padding: 60px 315px 0 315px;
+  }
+
+  .logo {
+    width: 65px;
+  }
+  
+  .card h4 {
+    font-size: 35px;
+  }
+
+  .card p {
+    font-size: 15px;
+  }
+
+  .card form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .card form input {
+    padding: 12.5px 95px 12.5px 30px;
+  }
+
+  .card form button {
+    padding: 15px 50px;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+
+  .dashboard {
+    width: 450px;
+  }
 }

@@ -9,10 +9,14 @@ function validateEmail(email) {
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const emailVal = email.value;
-  if (!emailVal || !validateEmail(emailVal)) {
-    form.classList.add('error');
+  if (!emailVal) {
+    form.classList.add('error2');
+    form.classList.remove('error1');
+  } else if (!validateEmail(emailVal)) {
+    form.classList.add('error1');
+    form.classList.remove('error2');
   } else {
-    form.classList.remove('error');
+    form.classList.remove('error1', 'error2');
   }
 });
 
