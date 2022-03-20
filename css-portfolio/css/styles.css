@@ -1,0 +1,41 @@
+/* Global Styles */
+body {
+  color: #00BEC5;
+  background-color: #050833;
+  text-align: center;
+}
+
+img {
+  width: 600px;
+}
+
+/* Profile */
+header {
+  color: #FF0BAC;
+  border: 5px solid #00BEC5;
+}
+
+hr {
+  border: 2px solid #00BEC5;
+}
+
+/* Projects */
+
+.projects {
+
+}
+
+/* Work Experience */
+
+.work {
+  color: #FF0BAC;
+  background-color: #54086B;
+}
+/* Education */
+
+/* Contact Info */
+
+footer {
+  color: #FF0BAC;
+  background-color: #54086B;
+}
